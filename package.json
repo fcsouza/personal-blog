@@ -17,7 +17,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "sharp": "^0.22.0"
+    "sharp": "^0.22.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -57,6 +58,9 @@
     "setup": "node ./bin/setup.js",
     "start": "npm run develop",
     "heroku-postbuild": "gatsby build",
-    "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf "
-  }
+    "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf ",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
